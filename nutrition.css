@@ -1,0 +1,314 @@
+.field-help-link{margin-left:8px;color:var(--green2);font-size:10px;text-decoration:underline;text-underline-offset:2px}
+.database-note{margin:5px 0 9px;color:#758078;font-size:10px;line-height:1.65}
+.actual-feed-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.actual-feed-row{display:grid;grid-template-columns:minmax(0,1fr) 86px auto;align-items:center;gap:7px;padding:7px;border:1px solid #edf0ea;border-radius:8px;background:#fafbf8;color:#4d5a51;font-size:10px}
+.actual-feed-row input,.database-field input,.database-field select{width:100%;min-width:0;height:36px;padding:0 8px;border:1px solid #e5e9e2;border-radius:7px;background:white;color:#344139;font:inherit}
+.actual-feed-row small{color:#879087;font-size:9px;white-space:nowrap}
+.database-admin{margin:16px 0;padding:12px;border:1px solid #e5e9e2;border-radius:10px;background:#fafbf8}
+.database-admin>summary,.database-record>summary{color:var(--green);font-weight:600;font-size:11px;cursor:pointer}
+.database-admin h4{margin:14px 0 6px;color:#36473c;font-size:11px}
+.database-admin h5{margin:12px 0 6px;color:#607067;font-size:10px}
+.database-record{margin:8px 0;padding:9px;border:1px solid #e8ece4;border-radius:8px;background:white}
+.database-field-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px}
+.database-field{display:grid;gap:3px;color:#68766d;font-size:9px}
+.database-field input,.database-field select{height:32px;font-size:10px}
+.requirement-grid{display:grid;gap:8px;margin-top:8px}
+.requirement-row{display:grid;grid-template-columns:minmax(130px,1fr) repeat(2,minmax(105px,.8fr)) minmax(150px,1.2fr);gap:8px;align-items:end;padding:8px;border:1px solid #edf0ea;border-radius:8px;background:#fafbf8}
+.requirement-row> b{align-self:center;color:#36473c;font-size:10px}
+.requirement-stage h5{margin-top:14px}
+.mineral-requirement-list{display:grid;gap:7px}
+.mineral-requirement-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:9px 0;border-top:1px solid #e8ece4;font-size:10px}
+.mineral-requirement-row strong{color:#36473c}
+.mineral-requirement-row span,.mineral-requirement-row small{color:#68766d}
+.mineral-requirement-row span:last-of-type,.mineral-requirement-row small:last-child{grid-column:1/-1}
+.mineral-requirement-row b{color:#36473c}
+.error-message:not([hidden]){padding:8px;border-radius:7px;background:#fff0eb;color:#9b3f30;font-size:10px}
+.nutrient-results{margin:15px 0;padding:14px;border:1px solid #e7ecdf;border-radius:11px;background:#f8faf5}
+.nutrient-results h4,.mineral-advice h4{margin:0 0 8px;color:var(--green);font-size:13px}
+.nutrient-result-list>div{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid #e8ece4;font-size:10px}
+.nutrient-result-list>div b{color:#36473c;font-size:10px;text-align:right}
+.nutrient-result-list>div small{min-width:90px;color:#879087;text-align:right}
+.ration-feed-list>div{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid #e8ece4;font-size:10px}
+.ration-feed-list small{color:#879087}
+.source-list{margin:4px 0;padding-left:18px;color:#758078;font-size:9px;line-height:1.65}
+.mineral-warning{margin:10px 0;padding:9px;border-radius:7px;background:#fff4df;color:#775d2c;font-size:10px;line-height:1.65}
+.farm-minerals{min-width:0;margin:0;padding:12px;border:1px solid #e5e9e2;border-radius:9px;background:#fafbf8}
+.farm-minerals legend{padding:0 5px;color:var(--green);font-size:16px;font-weight:600}
+.farm-minerals>.database-note{font-size:15px;line-height:1.7}
+.farm-mineral-row{padding:10px 0;border-bottom:1px solid #e8ece4}
+.farm-mineral-choice{display:flex;align-items:center;gap:10px;color:#425047;font-size:16px;line-height:1.5}
+.farm-mineral-choice input{width:18px;height:18px;accent-color:var(--green)}
+.farm-mineral-detail{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:8px 0 0 24px}
+.farm-mineral-detail[hidden]{display:none}
+.farm-mineral-detail .database-field{font-size:14px;line-height:1.5}
+.farm-mineral-detail input{height:42px;font-size:15px}
+.farm-mineral-label-status{grid-column:1/-1;color:#68766d;font-size:14px;line-height:1.6}
+.mineral-table-wrap{max-width:100%;overflow-x:auto}
+.mineral-table{width:100%;min-width:760px;border-collapse:collapse;font-size:10px}
+.mineral-table th,.mineral-table td{padding:8px;border-bottom:1px solid #e8ece4;text-align:left;vertical-align:top}
+.mineral-table thead th{background:#f0f4eb;color:var(--green);font-weight:600}
+.mineral-table tbody th{color:#36473c;font-weight:600}
+.mineral-table td small{color:#758078}
+.mineral-guidance{margin-top:12px;padding:10px 12px;border-radius:9px;background:#f8faf5;color:#536157;font-size:10px;line-height:1.7}
+.mineral-guidance h5{margin:0 0 5px;color:var(--green);font-size:11px}
+.mineral-guidance ul{margin:0;padding-left:18px}
+.result-table-wrap{max-width:100%;overflow-x:auto;margin:8px 0;scrollbar-width:none;-ms-overflow-style:none}
+.result-table-wrap::-webkit-scrollbar{display:none}
+.result-data-table{width:100%;min-width:560px;border-collapse:collapse;font-size:13px}
+.result-data-table th,.result-data-table td{padding:9px 8px;border-bottom:1px solid #e8ece4;text-align:left;vertical-align:top}
+.result-data-table thead th{background:#f0f4eb;color:var(--green);font-weight:600}
+.result-data-table tbody th{color:#36473c;font-weight:500}
+.feeding-recommendation{margin:15px 0;padding:14px;border:1px solid #e7ecdf;border-radius:11px;background:#f8faf5;color:#536157}
+.feeding-recommendation h4{margin:0 0 8px;color:var(--green);font-size:16px}
+.feeding-recommendation p{margin:6px 0;font-size:13px;line-height:1.65}
+.calculator-section .result-panel .feed-breakdown{display:block;width:100%;min-width:0;margin:8px auto 18px;padding:12px 0 0;border-top:1px solid #ffffff26}
+.calculator-section .result-panel .feed-breakdown>h4{text-align:center;margin:0 0 8px;color:#f4f5eb;font-size:16px}
+.calculator-section .result-panel .result-table-wrap{width:100%;min-width:0}
+.calculator-section .result-panel .result-data-table{width:100%;max-width:100%;min-width:560px;margin:0 auto}
+.feeding-advice-summary>h4{margin:0 0 6px;color:#fff;font-size:18px}
+.feeding-advice-summary>p{margin:0;color:#d6e4d7;font-size:13px;line-height:1.65}
+.feeding-recommendation-table{width:100%;border-collapse:collapse;font-size:14px}
+.feeding-recommendation-table th,.feeding-recommendation-table td{padding:9px 10px;border-bottom:1px solid #e7ecdf;text-align:left}
+.feeding-recommendation-table thead th{background:#f0f4eb;color:#285c43;font-weight:600}
+.feeding-recommendation-table tbody th{font-weight:500}
+.feeding-recommendation-table tbody td{text-align:right;color:#285c43;font-weight:600;white-space:nowrap}
+.feeding-recommendation .recommendation-missing{color:#536157}
+.score-cards{display:flex;flex-direction:column;gap:22px}
+.score-card{width:100%;min-height:0;padding:20px 22px 22px}
+.score-card b{display:block;margin:4px 0 10px;color:var(--green);font-size:20px}
+.score-card>p{margin:0;color:#657168;font-size:15px;line-height:1.8}
+.bcs-example-image{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;margin:0 auto 14px;border-radius:7px;background:#fff}
+
+.calculator-section .panel-title b{font-size:16px}
+.calculator-section .panel-title small{font-size:13px}
+.calculator-section .field>span{font-size:14px;line-height:1.5}
+.calculator-section .field>span small{font-size:13px}
+.calculator-section .field input,.calculator-section .field select{font-size:14px}
+.calculator-section .field-help-link{font-size:13px}
+.calculator-section .database-note{font-size:13px;line-height:1.65}
+.calculator-section .actual-feed-section>span{font-size:14px;font-weight:500}
+.calculator-section .actual-feed-row{grid-template-columns:minmax(0,1fr) 86px auto;gap:8px;padding:9px;font-size:13px;line-height:1.5}
+.calculator-section .actual-feed-row input{height:40px;font-size:14px}
+.calculator-section .actual-feed-row small{font-size:12px}
+.calculator-section .farm-minerals legend{font-size:15px}
+.calculator-section .farm-mineral-choice{gap:9px;font-size:14px}
+.calculator-section .farm-mineral-detail .database-field{font-size:13px}
+.calculator-section .farm-mineral-detail input{height:40px;font-size:14px}
+.calculator-section .farm-mineral-label-status{font-size:12px;line-height:1.6}
+.calculator-section .hint{font-size:12px;line-height:1.65}
+.calculator-section .calculate-button{font-size:14px}
+.calculator-section .result-label{font-size:13px}
+.calculator-section .result-panel h3{font-size:18px}
+.calculator-section .result-metrics>div span{font-size:13px;line-height:1.5}
+.calculator-section .result-note p{font-size:13px;line-height:1.65}
+.calculator-section .result-foot{font-size:12px;line-height:1.5}
+.calculator-section .nutrient-results h4,.calculator-section .mineral-advice h4{font-size:16px}
+.calculator-section .database-note,.calculator-section .nutrient-result-list>div,
+.calculator-section .nutrient-result-list>div b,.calculator-section .ration-feed-list>div,
+.calculator-section .mineral-table,.calculator-section .mineral-guidance,
+.calculator-section .mineral-warning{font-size:13px;line-height:1.6}
+.calculator-section .source-list{font-size:12px}
+.calculator-section .mineral-table th,.calculator-section .mineral-table td{padding:10px}
+.calculator-section .mineral-guidance h5{font-size:14px}
+.calculator-section .mineral-table td small{font-size:12px}
+.calculator-section .result-data-table,.calculator-section .result-data-table td,
+.calculator-section .result-data-table th{font-size:13px;line-height:1.6}
+.custom-feed-list{display:grid;gap:8px;margin-top:8px}
+.custom-feed-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.65fr) 38px;gap:8px;align-items:end;padding:9px;border:1px solid #edf0ea;border-radius:8px;background:#fafbf8}
+.custom-feed-row .database-field{font-size:12px}
+.add-feed-button{margin-top:9px;padding:9px 13px;border:1px solid #dfe5db;border-radius:8px;background:#fff;color:var(--green);font:500 12px "IBM Plex Sans Thai",sans-serif;cursor:pointer}
+.inventory-plan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+.reference-settings{font-size:13px}
+.reference-settings>summary{font-size:14px}
+.reference-subsection{margin-top:15px}
+.reference-subsection h4{margin:12px 0 6px;color:var(--green);font-size:14px}
+.reference-settings .database-record>summary{font-size:13px}
+.reference-settings .database-field{font-size:11px}
+.reference-settings .database-field input{height:36px;font-size:12px}
+.reference-settings .database-field-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.reference-settings .requirement-row{grid-template-columns:minmax(130px,1fr) repeat(2,minmax(100px,.8fr)) minmax(150px,1.2fr)}
+.result-step-heading{margin:18px 0 7px;color:#f4f5eb;font-size:15px}
+.daily-history{margin:16px 0;padding:12px;border:1px solid #ffffff2b;border-radius:10px;background:#ffffff0b;color:#eef4e8}
+.daily-history h4{margin:0 0 8px;font-size:14px}
+.daily-history ol{margin:0;padding-left:20px}
+.daily-history li{padding:7px 0;border-top:1px solid #ffffff25;font-size:12px}
+.daily-history li span{color:#c9d8ca}
+.stock-projection{margin-top:12px;padding:10px;border:1px solid #e5eadf;border-radius:9px;background:#fff;color:#536157}
+.stock-projection h5{margin:0 0 7px;color:var(--green);font-size:14px}
+.stock-projection ul{margin:0;padding-left:18px;font-size:12px;line-height:1.7}
+.stock-projection li+li{margin-top:5px}
+.stock-projection .database-note{margin-bottom:0}
+
+/* Clearer data entry and a shorter path to the main recommendation. */
+.calculator-section .form-group-heading{grid-column:1/-1;margin:4px 0 -3px;padding-bottom:7px;border-bottom:1px solid #edf0e9;color:var(--green);font-size:15px;font-weight:600}
+.calculator-section .feed-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px}
+.calculator-section .feed-section-heading>span{font-size:15px;font-weight:600;color:#344139}
+.calculator-section .feed-section-heading small{color:#7d887e;font-size:12px}
+.calculator-section .actual-feed-section .database-note{margin:5px 0 11px}
+.calculator-section .actual-feed-row{min-height:58px;padding:8px 10px}
+.calculator-section .actual-feed-row input{height:42px;border-color:#dce3d9;font-size:16px}
+.calculator-section .field input,.calculator-section .field select{min-height:44px;font-size:16px}
+.calculator-section .database-field input,.calculator-section .farm-mineral-detail input{min-height:42px}
+.calculator-section input:focus-visible,.calculator-section select:focus-visible,.calculator-section button:focus-visible,.calculator-section summary:focus-visible{outline:3px solid #84a987;outline-offset:2px}
+.optional-section{grid-column:1/-1;border:1px solid #e5e9e2;border-radius:11px;background:#fafbf8;padding:12px 14px}
+.optional-section>summary{display:flex;justify-content:space-between;align-items:center;gap:10px;cursor:pointer;list-style:none;color:var(--green);font-size:14px;font-weight:600}
+.optional-section>summary::-webkit-details-marker{display:none}
+.optional-section>summary:after{content:'＋';flex:0 0 auto;display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#eaf1e6;color:var(--green)}
+.optional-section[open]>summary{padding-bottom:9px;border-bottom:1px solid #e6eae1}
+.optional-section[open]>summary:after{content:'−'}
+.optional-section>summary small{margin-left:auto;color:#78847a;font-size:11px;font-weight:400}
+.optional-section .database-note{margin:9px 0}
+.calculator-section .calculate-button{position:sticky;bottom:8px;z-index:3;min-height:50px;box-shadow:0 6px 18px #183b2a33}
+.calculator-section .feeding-advice-summary{margin:14px 0 18px;padding:14px;border:1px solid #ffffff24;border-radius:12px;background:#ffffff0b}
+.calculator-section .feeding-recommendation{margin:10px 0 0;padding:12px;background:#f8faf5;color:#536157}
+.calculator-section .feeding-recommendation-table th,.calculator-section .feeding-recommendation-table td{padding:10px 8px}
+.calculator-section .feed-breakdown{margin-top:16px}
+
+@media(max-width:600px){
+  .calculator-section .form-group-heading{margin-top:5px;font-size:14px}
+  .calculator-section .feed-section-heading{align-items:flex-start;flex-direction:column;gap:0}
+  .calculator-section .feed-section-heading small{font-size:11px}
+  .calculator-section .actual-feed-row{min-height:60px}
+  .optional-section{padding:11px}
+  .optional-section>summary{align-items:flex-start;flex-wrap:wrap;font-size:13px}
+  .optional-section>summary small{order:3;width:100%;margin:0}
+  .optional-section>summary:after{margin-left:auto}
+  .calculator-section .calculate-button{bottom:6px;min-height:52px}
+  .calculator-section .feeding-advice-summary{padding:11px}
+}
+
+@media(max-width:600px){
+  .calculator-section .result-panel .result-data-table{width:max-content;max-width:none}
+  .actual-feed-grid{grid-template-columns:1fr}
+  .calculator-section .actual-feed-row{grid-template-columns:minmax(0,1fr) 86px;gap:5px 8px;padding:8px}
+  .calculator-section .actual-feed-row small{grid-column:1/-1}
+  .database-field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .requirement-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .requirement-row>b,.requirement-row .database-field:last-child{grid-column:1/-1}
+  .nutrient-result-list>div{grid-template-columns:minmax(0,1fr) auto}
+  .nutrient-result-list>div small{grid-column:1/-1;text-align:left}
+  .farm-mineral-detail{grid-template-columns:1fr;margin-left:0}
+  .calculator-section .result-metrics{gap:8px}
+  .calculator-section .result-metrics>div span{font-size:12px}
+  .calculator-section .result-metrics>div b{font-size:18px}
+  .calculator-section .result-foot{flex-wrap:wrap}
+  .inventory-plan,.custom-feed-row{grid-template-columns:1fr}
+  .custom-feed-row .icon-button{justify-self:end}
+  .reference-settings .database-field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reference-settings .requirement-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reference-settings .requirement-row>b,.reference-settings .requirement-row .database-field:last-child{grid-column:1/-1}
+  .daily-history{font-size:12px}
+  .score-cards{gap:15px}
+  .score-card{padding:13px}
+  .score-card b{font-size:17px}
+  .score-card>p{font-size:13px;line-height:1.7}
+}
+
+/* High contrast and consistent table columns in the calculator results. */
+.calculator-section .result-panel .result-table-wrap{overflow-x:auto;border:1px solid #ffffff35;border-radius:10px;background:#ffffff08;scrollbar-width:thin;scrollbar-color:#a9c3ad #ffffff18}
+.calculator-section .result-panel .result-table-wrap::-webkit-scrollbar{display:block;height:7px}
+.calculator-section .result-panel .result-table-wrap::-webkit-scrollbar-thumb{border-radius:8px;background:#a9c3ad}
+.calculator-section .result-panel .result-data-table{width:100%;min-width:720px;table-layout:fixed;border-collapse:collapse}
+.calculator-section .result-data-table .col-feed{width:12%}
+.calculator-section .result-data-table .col-fresh{width:16%}
+.calculator-section .result-data-table .col-dm{width:14%}
+.calculator-section .result-data-table .col-cp{width:14%}
+.calculator-section .result-data-table .col-tdn{width:15%}
+.calculator-section .result-data-table .col-source{width:29%}
+.calculator-section .result-data-table thead th{height:48px;padding:9px 8px;background:#f0f5e9;color:#204a35;text-align:left;vertical-align:middle;line-height:1.35;white-space:normal}
+.calculator-section .result-data-table tbody th,.calculator-section .result-data-table tbody td{padding:10px 8px;border-bottom:1px solid #ffffff32;color:#f7fbf4;text-align:left;vertical-align:middle;line-height:1.45}
+.calculator-section .result-data-table tbody tr:nth-child(even){background:#ffffff09}
+.calculator-section .result-data-table tbody th{font-weight:600}
+.calculator-section .result-data-table tbody td:not(.col-source){white-space:nowrap;font-variant-numeric:tabular-nums}
+.calculator-section .result-data-table .col-source{color:#dbe8dc;font-size:12px;overflow-wrap:anywhere}
+.calculator-section .feeding-recommendation-table{table-layout:fixed}
+.calculator-section .feeding-recommendation-table th,.calculator-section .feeding-recommendation-table td{vertical-align:middle;line-height:1.45}
+.calculator-section .feeding-recommendation-table tbody th{width:34%;color:#344139;text-align:left}
+.calculator-section .feeding-recommendation-table tbody td{color:#24583f;text-align:right;font-variant-numeric:tabular-nums}
+.calculator-section .feeding-recommendation-table tbody tr:nth-child(even){background:#f5f8f1}
+.calculator-section .feeding-recommendation-table thead th:first-child{width:34%;text-align:left}
+.calculator-section .feeding-recommendation-table thead th:nth-child(n+2){text-align:right}
+
+/* Clear comparison tables for nutrient and mineral results. */
+.calculator-section .nutrient-table-wrap,.calculator-section .mineral-table-wrap{width:100%;max-width:100%;overflow-x:auto}
+.calculator-section .nutrient-comparison-table,.calculator-section .mineral-table{width:100%;min-width:0;table-layout:fixed;border-collapse:collapse;color:#344139;font-size:13px;line-height:1.55}
+.calculator-section .nutrient-comparison-table th,.calculator-section .nutrient-comparison-table td,
+.calculator-section .mineral-table th,.calculator-section .mineral-table td{padding:10px 9px;border-bottom:1px solid #e3e9dc;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.calculator-section .nutrient-comparison-table thead th,.calculator-section .mineral-table thead th{background:#edf3e8;color:#24583f;font-weight:700;vertical-align:middle}
+.calculator-section .nutrient-comparison-table tbody tr:nth-child(even),.calculator-section .mineral-table tbody tr:nth-child(even){background:#f5f8f1}
+.calculator-section .nutrient-comparison-table tbody th,.calculator-section .mineral-table tbody th{color:#344139;font-weight:600}
+.calculator-section .nutrient-comparison-table small,.calculator-section .mineral-table td small{display:block;margin-top:3px;color:#758078;font-size:11px;line-height:1.45}
+.calculator-section .nutrient-comparison-table th:nth-child(1){width:19%}
+.calculator-section .nutrient-comparison-table th:nth-child(2){width:21%}
+.calculator-section .nutrient-comparison-table th:nth-child(3){width:38%}
+.calculator-section .nutrient-comparison-table th:nth-child(4){width:22%}
+.calculator-section .mineral-table th:nth-child(1){width:13%}
+.calculator-section .mineral-table th:nth-child(2){width:18%}
+.calculator-section .mineral-table th:nth-child(3),.calculator-section .mineral-table th:nth-child(4){width:14%}
+.calculator-section .mineral-table th:nth-child(5){width:12%}
+.calculator-section .mineral-table th:nth-child(6){width:29%}
+.calculator-section .stock-projection-table th:nth-child(1){width:24%}
+.calculator-section .stock-projection-table th:nth-child(2){width:18%}
+.calculator-section .stock-projection-table th:nth-child(3){width:18%}
+.calculator-section .stock-projection-table th:nth-child(4){width:20%}
+.calculator-section .stock-projection-table th:nth-child(5){width:20%}
+.calculator-section .stock-projection-table thead th:nth-child(n+2):nth-child(-n+4),
+.calculator-section .stock-projection-table tbody td:nth-child(n+2):nth-child(-n+4){text-align:right;font-variant-numeric:tabular-nums}
+.nutrient-status{display:inline-block;padding:3px 8px;border-radius:999px;background:#e8eee3;color:#526052;font-size:12px;font-weight:600;white-space:normal}
+.nutrient-status.is-ok{background:#e4f2e8;color:#24603f}
+.nutrient-status.is-alert{background:#fff1db;color:#805514}
+.nutrient-status.is-unknown{background:#edf0ec;color:#616c63}
+
+@media(max-width:820px){
+  .calculator-section .nutrient-comparison-table,.calculator-section .mineral-table{display:block}
+  .calculator-section .nutrient-comparison-table thead,.calculator-section .mineral-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .calculator-section .nutrient-comparison-table tbody,.calculator-section .mineral-table tbody{display:grid;gap:9px}
+  .calculator-section .nutrient-comparison-table tbody tr,.calculator-section .mineral-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:hidden;border:1px solid #e1e8dc;border-radius:9px;background:#fff}
+  .calculator-section .nutrient-comparison-table tbody tr:nth-child(even),.calculator-section .mineral-table tbody tr:nth-child(even){background:#fff}
+  .calculator-section .nutrient-comparison-table tbody th,.calculator-section .mineral-table tbody th{grid-column:1/-1;padding:10px 12px;background:#edf3e8}
+  .calculator-section .nutrient-comparison-table tbody td,.calculator-section .mineral-table tbody td{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:8px 10px;border-bottom:1px solid #edf0e9;font-size:12px}
+  .calculator-section .nutrient-comparison-table tbody td:before,.calculator-section .mineral-table tbody td:before{content:attr(data-label);color:#66746a;font-size:11px;font-weight:500}
+  .calculator-section .nutrient-comparison-table tbody td[data-label="เป้าหมายต่อวัน"],.calculator-section .mineral-table tbody td[data-label="ควรทำอย่างไร"]{grid-column:1/-1}
+  .calculator-section .nutrient-comparison-table tbody td[data-label="เป้าหมายต่อวัน"]{grid-template-columns:1fr}
+  .calculator-section .mineral-table tbody td[data-label="ควรทำอย่างไร"]{grid-template-columns:1fr;line-height:1.6}
+  .calculator-section .mineral-table tbody td[data-label="สถานะ"]{grid-column:1/-1}
+  .calculator-section .nutrient-comparison-table tbody th,.calculator-section .nutrient-comparison-table tbody td,
+  .calculator-section .mineral-table tbody th,.calculator-section .mineral-table tbody td{width:auto}
+  .calculator-section .nutrient-comparison-table tbody td:last-child{align-content:center}
+}
+
+@media(max-width:1200px){
+  .calculator-section .calculator-grid{grid-template-columns:minmax(0,1fr)}
+  .calculator-section .result-panel .result-data-table{width:100%;min-width:640px}
+.calculator-section .result-data-table .col-feed{width:18%}
+.calculator-section .result-data-table .col-fresh{width:25%}
+.calculator-section .result-data-table .col-dm{width:25%}
+.calculator-section .result-data-table .col-cp{width:32%}
+}
+
+@media(max-width:760px){
+  .calculator-section .result-panel .result-table-wrap{overflow:visible;border:0;background:none}
+  .calculator-section .result-panel .result-data-table{display:block;width:100%;min-width:0;table-layout:auto}
+  .calculator-section .result-data-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .calculator-section .result-data-table tbody{display:grid;gap:9px}
+  .calculator-section .result-data-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:hidden;border:1px solid #ffffff38;border-radius:9px;background:#316a50}
+  .calculator-section .result-data-table tbody tr:nth-child(even){background:#376f55}
+  .calculator-section .result-data-table tbody th,.calculator-section .result-data-table tbody td{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;padding:9px 10px;border-bottom:1px solid #ffffff26;white-space:normal}
+  .calculator-section .result-data-table tbody th.col-feed{grid-column:1/-1;justify-content:flex-start;background:#2a5e46;color:#fff;font-size:14px}
+  .calculator-section .result-data-table tbody td:before{flex:0 0 auto;color:#dbe8dc;font-size:11px;font-weight:500}
+  .calculator-section .result-data-table tbody td.col-fresh:before{content:'ปริมาณสด'}
+  .calculator-section .result-data-table tbody td.col-dm:before{content:'วัตถุแห้ง'}
+  .calculator-section .result-data-table tbody td.col-cp:before{content:'โปรตีน'}
+  .calculator-section .result-data-table tbody td.col-tdn:before{content:'พลังงาน TDN'}
+  .calculator-section .result-data-table tbody td.col-source{grid-column:1/-1;justify-content:flex-start;border-bottom:0;color:#e8f0e7}
+  .calculator-section .result-data-table tbody td.col-source:before{content:'ข้อมูล'}
+  .calculator-section .result-data-table tbody td:not(.col-source){font-size:12px;white-space:normal}
+}
+
+@media(min-width:761px){
+  .calculator-section .result-panel .result-table-wrap{overflow-x:hidden}
+  .calculator-section .result-panel .result-data-table{width:100%!important;min-width:0!important;max-width:100%;table-layout:fixed}
+  .calculator-section .result-data-table tbody td:not(.col-source){white-space:normal;overflow-wrap:anywhere}
+}
+.calculator-section .date-input-hint{display:block;margin-top:4px;color:#748176;font-size:12px}
+.calculator-section .canonical-date-input{display:none!important}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ed">
+  <meta name="description" content="เครื่องมือประมาณปริมาณอาหารโคเนื้อและคู่มือประเมินคะแนนความสมบูรณ์ร่างกาย BCS">
+  <title>โคดี — เครื่องมืออาหารและ BCS โคเนื้อ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="photo.css">
+  <link rel="stylesheet" href="scale.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="โคดี หน้าแรก">
+      <span class="brand-mark" aria-hidden="true">🐄</span>
+      <span>โค<span class="brand-accent">ดี</span><small>เครื่องมือดูแลโคเนื้อ</small></span>
+    </a>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a class="active" href="#welcome">หน้าแรก</a>
+      <a href="#bcs">ประเมิน BCS</a>
+      <a href="calculator.html">คำนวณอาหาร</a>
+      <a href="summary.html">สรุปข้อมูล</a>
+      <a href="guide.html">คู่มือ</a>
+    </nav>
+    <a class="top-cta" href="calculator.html">คำนวณอาหาร <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="welcome" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <span class="eyebrow">เครื่องมือดูแลโคเนื้อ</span>
+        <h1 id="welcome-title">ดูแลโคให้ดี<br><em>เริ่มจากข้อมูลที่เข้าใจง่าย</em></h1>
+        <p>ประเมินคะแนนความสมบูรณ์ร่างกาย BCS จากรูปและจุดสังเกต พร้อมวางแผนอาหารให้เหมาะกับโคของคุณ</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#bcs">เริ่มประเมิน BCS <span>↓</span></a>
+          <a class="text-link" href="calculator.html">ไปหน้าคำนวณอาหาร <span>→</span></a>
+        </div>
+      </div>
+      <div class="hero-art hero-herd-art">
+        <img src="images/cow-herd.jpg" alt="ฝูงโคยืนอยู่ในทุ่งหญ้า">
+        <div class="hero-photo-caption"><span>🐄</span><div><b>ใส่ใจสุขภาพโคทุกวัน</b><small>ประเมิน · วางแผน · ดูแล</small></div></div>
+      </div>
+    </section>
+
+    <section class="section bcs-section" id="bcs">
+      <div class="section-heading"><div><span class="eyebrow">BODY CONDITION SCORE</span><h2>ประเมิน BCS</h2><p>คะแนนนี้ต้องดูรูปร่างและคลำจุดสะสมไขมัน ไม่สามารถคำนวณจากน้ำหนักหรืออายุเพียงอย่างเดียว</p></div><span class="section-no">01 <i>/ 03</i></span></div>
+
+      <div class="panel bcs-card">
+        <div class="photo-assessment">
+          <div class="photo-heading"><div><span class="photo-kicker">PHOTO ASSIST</span><b>ช่วยประเมิน BCS จากรูป</b><small>เพิ่มรูปเพื่อช่วยสังเกต แล้วตอบคำถาม 4 ข้อ</small></div><span class="camera-icon">▧</span></div>
+          <div class="photo-step-title"><b>1. เพิ่มรูปโค</b><span>รูปด้านข้างจำเป็น · รูปด้านหลังช่วยให้ประเมินครบขึ้น</span></div>
+          <div class="photo-pickers">
+            <label class="photo-picker" for="side-photo"><span class="photo-preview" id="side-preview"><span>＋</span></span><span><b>ด้านข้างขวา <i class="required-tag">จำเป็น</i></b><small>ให้เห็นซี่โครงและลำตัวทั้งตัว</small></span><em data-photo-action>ถ่าย / เลือกรูป</em><input id="side-photo" type="file" accept="image/*" capture="environment"></label>
+            <label class="photo-picker" for="rear-photo"><span class="photo-preview" id="rear-preview"><span>＋</span></span><span><b>ด้านหลัง <i class="recommended-tag">แนะนำ</i></b><small>ให้เห็นสะโพกและโคนหาง</small></span><em data-photo-action>ถ่าย / เลือกรูป</em><input id="rear-photo" type="file" accept="image/*" capture="environment"></label>
+          </div>
+          <div class="photo-tip"><span>ⓘ</span> รูปช่วยให้สังเกตได้ง่ายขึ้น คะแนนคำนวณจากคำตอบที่เลือก ไม่ได้วิเคราะห์ภาพอัตโนมัติ · ถ่ายตอนโคยืนตัวตรง แสงสว่าง และเห็นทั้งตัว</div>
+          <div class="photo-step-title question-step-title"><b>2. เลือกสิ่งที่เห็นจากรูป</b><span id="question-progress" aria-live="polite">ตอบแล้ว 0/4 ข้อ · เลือก 1 คำตอบในแต่ละข้อ</span></div>
+          <div class="visual-questions">
+            <div class="visual-question" data-question="ribs"><b><i>1</i> ซี่โครงในรูปด้านข้าง</b><div class="answer-row"><button type="button" data-score="2">เห็นชัดหลายซี่</button><button type="button" data-score="4">เห็นบางซี่</button><button type="button" data-score="5.5">ไม่เห็น แต่พอมองทรงซี่โครง</button><button type="button" data-score="7.5">ไม่เห็นเลย ลำตัวกลม</button></div></div>
+            <div class="visual-question" data-question="spine"><b><i>2</i> สันหลังและปุ่มสะโพก</b><div class="answer-row"><button type="button" data-score="2">เป็นสัน/มุมแหลมเด่น</button><button type="button" data-score="4">เห็นปุ่มกระดูกชัด</button><button type="button" data-score="5.5">ทรงมน มีเนื้อคลุม</button><button type="button" data-score="7.5">ปุ่มกระดูกหายไป</button></div></div>
+            <div class="visual-question" data-question="tail"><b><i>3</i> บริเวณโคนหาง</b><div class="answer-row"><button type="button" data-score="2">เป็นแอ่งลึก/กระดูกเด่น</button><button type="button" data-score="4">เห็นร่องและกระดูก</button><button type="button" data-score="5.5">ค่อนข้างเรียบ</button><button type="button" data-score="7.5">มีไขมันนูนรอบโคนหาง</button></div></div>
+            <div class="visual-question" data-question="body"><b><i>4</i> รูปร่างโดยรวม</b><div class="answer-row"><button type="button" data-score="2">ผอม เห็นโครงกระดูก</button><button type="button" data-score="4">เพรียว ยังเห็นมุมกระดูก</button><button type="button" data-score="5.5">เรียบ สมส่วน</button><button type="button" data-score="7.5">อ้วน มีไขมันชัด</button></div></div>
+          </div>
+          <button class="button primary photo-calculate" id="estimate-bcs" type="button">คำนวณคะแนนจากจุดสังเกต <span>→</span></button>
+          <p class="photo-error" id="photo-error" role="alert" hidden></p>
+          <div class="photo-result" id="photo-result" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">🐄</span><span>โค<span class="brand-accent">ดี</span><small>เครื่องมือดูแลโคเนื้อ</small></span></a><span>ทำด้วยความใส่ใจ เพื่อโคที่แข็งแรงและคนเลี้ยงที่มั่นใจ</span><a href="index.html">กลับขึ้นด้านบน ↑</a></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

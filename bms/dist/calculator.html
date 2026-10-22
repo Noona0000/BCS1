@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ed">
+  <meta name="description" content="เครื่องมือประมาณปริมาณอาหารโคเนื้อและคู่มือประเมินคะแนนความสมบูรณ์ร่างกาย BCS">
+  <title>คำนวณอาหาร — โคดี</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+
+
+  <script type="module" crossorigin src="/assets/app-hxiRZStK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/app-CvmQha5c.css">
+  <link rel="stylesheet" crossorigin href="/assets/calculator-CP5XjWxp.css">
+  <link rel="stylesheet" crossorigin href="/assets/nutrition-Bkm6fZaM.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="โคดี หน้าแรก">
+      <span class="brand-mark" aria-hidden="true">🐄</span>
+      <span>โค<span class="brand-accent">ดี</span><small>เครื่องมือดูแลโคเนื้อ</small></span>
+    </a>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">ประเมิน BCS</a>
+      <a class="active" href="calculator.html">คำนวณอาหาร</a>
+      <a href="guide.html">คู่มือ</a>
+    </nav>
+    <a class="top-cta" href="guide.html">คู่มือ BCS <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="section calculator-section" id="calculator">
+      <div class="section-heading"><div><span class="eyebrow">FEED CALCULATOR</span><h2>คำนวณปริมาณอาหาร</h2><p>บันทึกอาหารจริง วิเคราะห์สารอาหาร และวางแผนอาหารกับแร่ธาตุ</p></div><span class="section-no">02 <i>/ 03</i></span></div>
+      <div class="calculator-grid">
+        <form class="panel input-panel" id="feed-form">
+          <div class="panel-title"><span class="panel-icon">✎</span><span><b>1.บันทึกอาหารที่ให้โคในแต่ละวัน</b><small>กรอกชนิดอาหารและปริมาณที่ให้จริง</small></span></div>
+          <div class="form-grid">
+            <label class="field full"><span>วันที่บันทึก</span><input id="ration-date" type="date" required></label>
+            <label class="field full"><span>ชื่อโค <small>(ไม่บังคับ)</small></span><input id="cow-name" type="text" placeholder="เช่น เจ้าทองดี" maxlength="32"></label>
+            <label class="field"><span>อายุ</span><div class="input-unit"><input id="age" type="number" min="0" max="360" value="24" inputmode="decimal"><span>เดือน</span></div></label>
+            <label class="field"><span>น้ำหนักตัว</span><div class="input-unit"><input id="weight" type="number" min="20" max="2000" value="400" inputmode="decimal" required><span>กก.</span></div></label>
+            <label class="field"><span>เพศ</span><select id="sex"><option value="female">แม่โค</option><option value="male">โคผู้</option></select></label>
+            <label class="field"><span>BCS <a class="field-help-link" href="guide.html#guide">ดูภาพตัวอย่าง 1–9</a></span><select id="bcs">
+              <option value="1">1/9 — ผอมแห้งมาก</option><option value="2">2/9 — ผอมมาก</option><option value="3">3/9 — ผอม</option><option value="4">4/9 — ค่อนข้างเพรียว</option><option value="5" selected>5/9 — สมส่วน</option><option value="6">6/9 — ดี</option><option value="7">7/9 — อวบ</option><option value="8">8/9 — อ้วน</option><option value="9">9/9 — อ้วนมาก</option>
+            </select></label>
+            <label class="field full"><span>เป้าหมายการเลี้ยง</span><select id="target"><option value="maintain">คงน้ำหนัก</option><option value="gain" selected>เพิ่มน้ำหนัก</option><option value="condition">ปรับสภาพร่างกายตาม BCS</option></select></label>
+            <label class="field full"><span>ช่วงการเลี้ยง</span><select id="stage"><option value="grower">ลูกโค / โคกำลังโต (6–18 เดือน)</option><option value="maintain" selected>โคโตเต็มวัย ระยะพัก (18–36 เดือน)</option><option value="pregnant">แม่โคตั้งท้อง (24–60 เดือน)</option><option value="lactating">แม่โคให้นม (24–60 เดือน)</option><option value="finishing">โคขุน (18–36 เดือน)</option></select></label>
+            <div class="actual-feed-section field full">
+              <span>ปริมาณอาหารที่ให้จริงต่อวัน (กก.สด)</span>
+              <p class="database-note">ตัวอย่างหน้าจอ ไม่ใช่สูตรแนะนำให้โคจริง กรอกเฉพาะอาหารที่ให้จริง ระบบจะไม่เดาค่าทางอาหารที่ไม่มีแหล่งอ้างอิง</p>
+              <div class="actual-feed-grid" id="actual-feed-inputs"></div>
+              <div class="custom-feed-list" id="custom-feed-inputs"></div>
+              <button class="button secondary add-feed-button" id="add-custom-feed" type="button">＋ เพิ่มรายการอาหาร</button>
+            </div>
+            <fieldset class="field full farm-minerals">
+              <legend>แร่ธาตุที่มีอยู่ในฟาร์ม</legend>
+              <p class="database-note">เลือกผลิตภัณฑ์ที่ใช้อยู่ ระบุชื่อ ปริมาณที่ให้จริง และสต็อกคงเหลือ ระบบใช้ข้อมูลฉลากเท่านั้น</p>
+              <div class="inventory-plan">
+                <label class="database-field">จำนวนโคที่ได้รับ (ตัว)<input id="herd-headcount" type="number" min="1" step="1" value="1" required></label>
+                <label class="database-field">วางแผนเลี้ยง (วัน)<input id="inventory-days" type="number" min="1" step="1" value="30" required></label>
+              </div>
+              <div id="farm-mineral-inputs"></div>
+            </fieldset>
+          </div>
+          <div class="hint"><span>ⓘ</span> ผลนี้สรุปจากปริมาณอาหารจริงที่กรอก ไม่ใช่สูตรแนะนำปริมาณอาหารรายวัน หากไม่มีข้อมูลวิเคราะห์หรือฉลากจะแสดง “ยังประเมินไม่ได้”</div>
+          <button class="button primary calculate-button" type="submit">บันทึกอาหารและวิเคราะห์ผล <span>→</span></button>
+          <p class="error-message" id="form-error" role="alert" hidden></p>
+          <details class="database-admin reference-settings">
+            <summary>ตั้งค่าข้อมูลอ้างอิงสำหรับการคำนวณ</summary>
+            <p class="database-note">กรอกค่าจากผลวิเคราะห์อาหาร ฉลากผลิตภัณฑ์ หรือตารางความต้องการที่มีแหล่งอ้างอิง ระบบจะไม่สร้างค่าขึ้นเอง</p>
+            <div id="reference-data-settings"></div>
+            <p class="error-message" id="database-error" role="alert" hidden></p>
+          </details>
+        </form>
+
+        <div class="result-panel" id="feed-result" aria-live="polite">
+          <div class="result-top"><span class="result-label"><i></i> สรุปจากอาหารที่ให้จริงต่อวัน</span><button class="icon-button" id="copy-result" type="button" aria-label="คัดลอกผล">▢</button></div>
+          <h3 id="result-name">โคของคุณ</h3>
+          <div class="main-result"><b id="as-fed">—</b><span>กก.อาหารสดที่กรอก / วัน</span></div>
+          <div class="result-divider"></div>
+          <div class="result-divider"></div>
+
+<div class="feeding-advice-summary">
+  <h4>อาหารที่ควรเพิ่มในแต่ละวัน</h4>
+  <p>คำแนะนำจากปริมาณอาหารที่ให้จริง เป้าหมายการเลี้ยง
+    และคะแนน BCS ของโค</p>
+
+  <div id="feeding-recommendation" class="feeding-recommendation">
+    <p>กรอกข้อมูลอาหารและกดคำนวณเพื่อดูว่า
+      ควรเพิ่มอาหารชนิดใดและปริมาณเท่าไร</p>
+  </div>
+</div>
+
+<div hidden>
+  <span id="dm-result">—</span>
+  <span id="crude-protein-result">—</span>
+</div>
+          <div class="feed-breakdown" id="feed-breakdown"><p>กรอกปริมาณอาหารจริงแล้วคำนวณเพื่อดูผล</p></div>
+          <section class="daily-history" id="daily-feed-history" aria-live="polite">
+            <h4>ประวัติอาหารที่บันทึก</h4>
+            <p>ยังไม่มีรายการบันทึก</p>
+          </section>
+          <h4 class="result-step-heading">2. วิเคราะห์พลังงาน โปรตีน วัตถุแห้ง และแร่ธาตุ</h4>
+          <section class="nutrient-results" id="nutrient-results" aria-live="polite"></section>
+          <section class="mineral-advice" id="mineral-result" aria-live="polite" aria-label="คำแนะนำแร่ธาตุ">
+            <h4>คำแนะนำแร่ธาตุ</h4>
+            <p>กรอกข้อมูลอาหารและกดคำนวณเพื่อดูว่า
+              ควรเพิ่มแร่ธาตุชนิดใดและปริมาณเท่าไร</p>
+          <div class="result-note"><span>✦</span><p id="result-note-text">ค่านี้คืออาหารรวมทั้งวัน ไม่ใช่อาหารข้นอย่างเดียว ควรมีน้ำสะอาดและอาหารหยาบเพียงพอ</p></div>
+          <div class="result-foot"><span id="result-status">รอข้อมูลอาหารและผลวิเคราะห์</span><span id="ratio-label">ยังประเมินไม่ได้</span></div>
+        </div>
+      </div>
+      <div class="disclaimer"><span>!</span><p><b>ใช้เป็นค่าเริ่มต้นเพื่อวางแผนเท่านั้น</b> ความต้องการจริงขึ้นกับคุณภาพอาหาร พันธุ์ การตั้งท้อง/ให้นม อากาศ และเป้าหมายการเพิ่มน้ำหนัก ควรปรับตามสภาพตัวและคำแนะนำผู้เชี่ยวชาญด้านโภชนาการสัตว์</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">🐄</span><span>โค<span class="brand-accent">ดี</span><small>เครื่องมือดูแลโคเนื้อ</small></span></a><span>ทำด้วยความใส่ใจ เพื่อโคที่แข็งแรงและคนเลี้ยงที่มั่นใจ</span><a href="index.html">กลับขึ้นด้านบน ↑</a></footer>
+
+</body>
+</html>

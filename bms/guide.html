@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ed">
+  <meta name="description" content="คู่มือประเมิน BCS และการจัดการอาหารโคเนื้อ">
+  <title>คู่มือ — โคดี</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nutrition.css">
+  <link rel="stylesheet" href="photo.css">
+  <link rel="stylesheet" href="scale.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="โคดี หน้าแรก">
+      <span class="brand-mark" aria-hidden="true">🐄</span>
+      <span>โค<span class="brand-accent">ดี</span><small>เครื่องมือดูแลโคเนื้อ</small></span>
+    </a>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">ประเมิน BCS</a>
+      <a href="calculator.html">คำนวณอาหาร</a>
+      <a class="active" href="guide.html">คู่มือ</a>
+    </nav>
+    <a class="top-cta" href="index.html">ประเมิน BCS <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="section guide-section" id="guide">
+      <div class="section-heading"><div><span class="eyebrow">FIELD GUIDE</span><h2>คู่มือดูคะแนน BCS โคเนื้อ</h2><p>ใช้ภาพตัวอย่างแต่ละระดับและจุดสังเกตประกอบการให้คะแนนจากรูปร่างจริง</p></div><span class="section-no">03 <i>/ 03</i></span></div>
+      <div class="guide-head"><div><span>ระบบคะแนนเต็ม 9</span><small>แบบที่ใช้ในเอกสารอ้างอิง</small></div><div class="legend"><span><i class="thin"></i> ผอม</span><span><i class="ideal"></i> เหมาะสม</span><span><i class="fat"></i> อ้วน</span></div></div>
+      <div class="score-cards" id="score-cards"></div>
+      <div class="guide-bottom"><div class="guide-tip"><span>✓</span><div><b>วิธีประเมินที่แนะนำ</b><p>สังเกตด้านขวาและด้านหลังในที่สว่าง คลำร่วมกับการมอง และให้ผู้ประเมินคนเดิมติดตามซ้ำเพื่อเทียบการเปลี่ยนแปลง</p></div></div><div class="guide-tip target"><span>★</span><div><b>ช่วงคะแนนที่ควรจับตา</b><p><strong>1–3 ผอม</strong> อาจขาดพลังงาน · <strong>4–6 เหมาะสม</strong> สำหรับแม่โคทั่วไป · <strong>7–9 อ้วน</strong> ควรทบทวนการให้อาหาร</p></div></div></div>
+      <div class="sources"><b>แหล่งข้อมูลและข้อจำกัด</b><span>คำอธิบาย BCS เป็นแนวทางประกอบการสังเกต ไม่แทนการตรวจโดยผู้เชี่ยวชาญ · เครื่องคำนวณสรุปสารอาหารจากปริมาณอาหารจริงและค่าที่ผู้ดูแลบันทึกจากผลวิเคราะห์/ฉลากเท่านั้น หากไม่มีข้อมูลจะแสดง “ยังประเมินไม่ได้” และยังไม่มีแบบจำลองความต้องการสารอาหารรายระยะที่ผ่านการตรวจสอบ</span><a href="https://youtu.be/z26dPsbFFvQ?si=As_fgrOtPhshDGM3" target="_blank" rel="noreferrer">วิดีโอแหล่งที่มา ↗</a><a href="/references/การให้คะแนนความสมบูรณ์ของร่างกาย.pdf" target="_blank" rel="noreferrer">เอกสารการให้คะแนนความสมบูรณ์ของร่างกาย (PDF) ↗</a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">🐄</span><span>โค<span class="brand-accent">ดี</span><small>เครื่องมือดูแลโคเนื้อ</small></span></a><span>ทำด้วยความใส่ใจ เพื่อโคที่แข็งแรงและคนเลี้ยงที่มั่นใจ</span><a href="index.html">กลับขึ้นด้านบน ↑</a></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

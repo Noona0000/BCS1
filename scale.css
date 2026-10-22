@@ -1,0 +1,116 @@
+body{font-size:16px}
+.topbar{height:82px;padding-left:max(calc((100% - 1320px)/2),32px);padding-right:max(calc((100% - 1320px)/2),32px)}
+.brand{font-size:21px}
+.brand-mark{width:42px;height:42px;font-size:22px}
+.brand small{font-size:10px}
+.nav{font-size:15px;gap:42px}
+.top-cta{font-size:14px;padding:10px 19px}
+.hero,.section,.quick-facts{max-width:1320px}
+.hero{min-height:520px;gap:52px;padding-top:72px;padding-bottom:60px}
+.hero h1{font-size:58px}
+.hero-copy>p{font-size:17px}
+.hero-art{height:400px}
+.hero-photo{background:#dce6cf}
+.hero-photo-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%}
+.hero-photo::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(180deg,transparent,#1f322b38);pointer-events:none}
+.hero-photo .hero-sticker,.hero-photo .hero-stat{z-index:3}
+.eyebrow{font-size:11px}
+.button{font-size:15px;padding:16px 21px}
+.text-link{font-size:14px}
+.trust-row{font-size:12px}
+.quick-facts{padding:23px 32px}
+.quick-facts b{font-size:14px}
+.quick-facts small{font-size:12px}
+.section{padding-top:44px;padding-bottom:54px}
+.section-heading h2{font-size:32px}
+.section-heading p{font-size:14px}
+.section-no{font-size:14px}
+.calculator-grid{gap:24px}
+.input-panel,.result-panel{padding:30px}
+.panel-title{gap:13px;margin-bottom:24px}
+.panel-icon{width:40px;height:40px;font-size:18px}
+.panel-title b{font-size:15px}
+.panel-title small{font-size:12px}
+.form-grid{gap:16px}
+.field>span{font-size:13px;margin-bottom:7px}
+.field input,.field select{height:49px;padding-left:13px;font-size:14px}
+.input-unit input{padding-right:62px}
+.input-unit>span{top:15px;font-size:12px}
+.hint{font-size:11px;padding:11px 12px}
+.main-result b{font-size:56px}
+.photo-assessment{padding:20px}
+.photo-heading>div>b{font-size:15px}
+.photo-heading>div>small{font-size:11px}
+.photo-kicker{font-size:9px}
+.camera-icon{width:40px;height:40px}
+.photo-picker{min-height:82px;padding:10px;gap:11px}
+.photo-preview{width:58px;height:58px;flex-basis:58px}
+.photo-picker b{font-size:11px}
+.photo-picker small,.photo-picker em{font-size:9px}
+.photo-tip,.photo-disclaimer{font-size:10px}
+.visual-question>b{font-size:11px}
+.visual-question>b i{width:20px;height:20px;font-size:10px}
+.answer-row button{min-height:40px;padding:6px;font-size:10px}
+.photo-calculate{height:48px;font-size:12px}
+.photo-result{padding:16px}
+.photo-result-top,.photo-range{font-size:11px}
+.photo-score{font-size:14px}
+.photo-score b{font-size:29px}
+.photo-result>p,.photo-result>small{font-size:10px}
+.manual-bcs b{font-size:13px}
+.manual-bcs small{font-size:11px}
+
+@media(max-width:1400px){
+  .hero,.section,.quick-facts,footer{margin-left:32px;margin-right:32px}
+  .topbar{padding-left:32px;padding-right:32px}
+}
+
+@media(max-width:800px){
+  .topbar{height:76px}
+  .nav{font-size:13px;gap:17px}
+  .hero{min-height:450px;padding-top:52px}
+  .hero h1{font-size:48px}
+  .hero-copy>p{font-size:15px}
+  .hero-art{height:330px}
+  .quick-facts{padding:18px 12px}
+  .quick-facts b{font-size:12px}
+  .quick-facts small{font-size:11px}
+  .calculator-grid{gap:16px}
+  .input-panel,.result-panel{padding:24px}
+}
+
+@media(max-width:600px){
+  .topbar{height:66px;padding:0 17px}
+  .brand{font-size:18px}
+  .brand-mark{width:36px;height:36px;font-size:19px}
+  .nav{font-size:11px;gap:13px}
+  .hero{margin:0;padding:39px 19px 30px;gap:25px}
+  .hero h1{font-size:42px}
+  .hero-copy>p{font-size:14px}
+  .hero-art{height:280px}
+  .quick-facts{margin:0 17px 25px;padding:14px}
+  .quick-facts b{font-size:12px}
+  .quick-facts small{font-size:10px}
+  .section{margin:0 17px;padding:29px 0 36px}
+  .section-heading h2{font-size:25px}
+  .section-heading p{font-size:11px}
+  .section-no{font-size:11px}
+  .calculator-grid{grid-template-columns:1fr}
+  .input-panel,.result-panel{padding:20px}
+  .field>span{font-size:12px}
+  .field input,.field select{height:44px;font-size:13px}
+  .hint{font-size:10px}
+  .photo-assessment{padding:14px 11px}
+  .photo-picker{min-height:68px;padding:6px;gap:6px}
+  .photo-preview{width:44px;height:44px;flex-basis:44px}
+  .photo-picker b{font-size:9px}
+  .photo-picker small,.photo-picker em{font-size:8px}
+  .photo-tip,.photo-disclaimer{font-size:9px}
+  .visual-question>b{font-size:10px}
+  .answer-row button{min-height:36px;font-size:9px}
+  .photo-result-top,.photo-range{font-size:9px}
+  .photo-score{font-size:12px}
+  .photo-score b{font-size:26px}
+  .photo-result>p,.photo-result>small{font-size:9px}
+  footer{margin:0 17px}
+}
